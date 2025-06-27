@@ -16,8 +16,10 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
+/* NAVBAR */
 .navbar {
   background-color: var(--main-color);
   padding: 15px 30px;
@@ -71,11 +73,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .full-screen {
-  height: 100vh;
-  justify-content: center;
+  min-height: 100vh;
 }
 
 .hero .profile-pic {
@@ -102,6 +104,7 @@ body {
   margin: 10px 0 20px;
 }
 
+/* BUTTONS */
 .btn {
   background: var(--main-color);
   color: white;
@@ -116,7 +119,19 @@ body {
   background: #6d47df;
 }
 
-/* CONTENT SECTIONS */
+.secondary-btn {
+  background: white;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  margin-left: 10px;
+}
+
+.secondary-btn:hover {
+  background: var(--main-color);
+  color: white;
+}
+
+/* SECTIONS */
 .content-section {
   padding: 60px 20px;
   max-width: 1000px;
@@ -131,10 +146,15 @@ body {
 
 .content-section ul {
   padding-left: 20px;
-  line-height: 2;
   font-size: 1rem;
+  list-style-type: disc;
 }
 
+.content-section ul li {
+  margin-bottom: 10px;
+}
+
+/* SKILLS */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -143,6 +163,7 @@ body {
   line-height: 1.6;
 }
 
+/* BACKGROUNDS */
 .purple-bg {
   background-color: #ede9ff;
 }
@@ -151,6 +172,51 @@ body {
   background-color: white;
 }
 
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-left: 5px solid var(--main-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+.content-section a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.content-section a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
   background-color: var(--main-color);
   color: white;
